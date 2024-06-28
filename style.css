@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'GothamBold';
+    src: url('fonts/GothamBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neighbor';
+    src: url('fonts/Neighbor.ttf') format('truetype');
+}
+
+body {
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    font-family: 'GothamBold', sans-serif;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.acf-fields {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 0.3s ease-in-out;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-family: 'Neighbor', sans-serif;
+    font-size: 1.5em;
+    font-weight: 900; /* Black font weight */
+    color: #333;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.acf-label {
+    font-family: 'Neighbor', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px; /* Added more spacing */
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.acf-label i {
+    margin-right: 10px;
+    color: #888;
+}
+
+/* Adding colored underline to labels */
+.sales-category .acf-label {
+    border-bottom: 2px solid #FFC20E;
+    width: fit-content; /* Make underline as wide as the text */
+}
+
+.logistics-category .acf-label {
+    border-bottom: 2px solid #0D9C4A;
+    width: fit-content;
+}
+
+.operations-category .acf-label {
+    border-bottom: 2px solid #F26539;
+    width: fit-content;
+}
+
+.research-and-development-category .acf-label {
+    border-bottom: 2px solid #00A2A2;
+    width: fit-content;
+}
+
+.social-media-category .acf-label {
+    border-bottom: 2px solid #E671AB;
+    width: fit-content;
+}
+
+.tech-category .acf-label {
+    border-bottom: 2px solid #0047AB;
+    width: fit-content;
+}
+
+.acf-input {
+    margin-bottom: 20px;
+    font-family: 'GothamBold', sans-serif;
+}
+
+.acf-input-wrap, .acf-input-wrap input, .acf-input-wrap textarea, .acf-input-wrap select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: 'GothamBold', sans-serif;
+    background-color: #f9f9f9;
+    font-size: 1em;
+}
+
+.acf-input-wrap input, .acf-input-wrap textarea, .acf-input-wrap select {
+    font-size: 1em;
+    color: #555;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.wide-textarea {
+    width: calc(100% + 10px); /* Slightly wider text area */
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.acf-checkbox-list {
+    list-style: none;
+    padding: 0;
+}
+
+.acf-checkbox-list li {
+    margin-bottom: 10px;
+}
+
+.acf-button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.acf-button-group label {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.acf-button-group label.selected {
+    background-color: #ddd;
+}
+
+.acf-button-group label:hover {
+    background-color: #e0e0e0;
+}
+
+/* Dynamic category colors */
+.sales-category .category-title,
+.sales-category .acf-label i {
+    color: #FFC20E;
+}
+
+.logistics-category .category-title,
+.logistics-category .acf-label i {
+    color: #0D9C4A;
+}
+
+.operations-category .category-title,
+.operations-category .acf-label i {
+    color: #F26539;
+}
+
+.research-and-development-category .category-title,
+.research-and-development-category .acf-label i {
+    color: #00A2A2;
+}
+
+.social-media-category .category-title,
+.social-media-category .acf-label i {
+    color: #E671AB;
+}
+
+.tech-category .category-title,
+.tech-category .acf-label i {
+    color: #0047AB;
+}
